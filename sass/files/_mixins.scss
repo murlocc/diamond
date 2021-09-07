@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $black-col;
+  &:hover {
+    text-decoration: none;
+    color: $black-col;
+  }
+}
+
+textarea,
+textarea:hover,
+textarea:focus,
+input,
+input:hover,
+input:focus,
+select:focus,
+select:hover {
+  outline: none;
+}
+
+%transition {
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -ms-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+}
+
+@mixin fontAll($size, $weight, $family) {
+  // font-size: $size;
+  // font-weight: $weight;
+  // font-family: $family;
+  font: {
+    size: $size;
+    weight: $weight;
+    family: $family;
+  }
+}
+
+@mixin fixImg($weight, $height, $cover: true) {
+  width: $weight;
+  height: $height;
+  img {
+    width: 100%;
+    height: 100%;
+    @if ($cover) {
+      object-fit: cover;
+    } @else {
+      object-fit: contain;
+    }
+  }
+}
+
+.btn-purp {
+  padding: 15px 40px;
+  background: linear-gradient(265.97deg, #b777be -9.18%, #88488f 103.05%);
+  @include fontAll(12px, 700, "Montserrat");
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid $main-col;
+  @extend %transition;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background: linear-gradient(265.97deg, #b777be -30%, #88488f 80%);
+    color: #fff;
+  }
+  svg {
+    margin-left: 15px;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.container {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-title {
+  @include fontAll(48px, 500, "CG");
+}
