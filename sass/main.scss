@@ -1,10 +1,8 @@
-@import 'files/fonts';
-@import 'files/colors';
-@import 'files/mixins.scss';
-@import 'files/media.scss';
-@import 'files/classes.scss';
-
-
+@import "files/fonts";
+@import "files/colors";
+@import "files/media.scss";
+@import "files/mixins.scss";
+@import "files/classes.scss";
 
 .container {
   width: 100%;
@@ -14,17 +12,20 @@
   margin-right: auto;
 }
 .main-title {
-  @include fontAll(48px, 500, 'CG');
+  @include fontAll(48px, 500, "CG");
 }
 
 //=================Header================//
 
-.header {
+header {
+  background-color: #fff;
+}
 
+.header {
   &-nav {
     &-item {
       a {
-        @include fontAll(13px, 400, 'Monserrat');
+        @include fontAll(13px, 400, "MS");
         text-transform: uppercase;
         color: $black-col;
         @extend %transition;
@@ -32,10 +33,10 @@
           color: $main-col;
         }
       }
-    } 
+    }
   }
   &-social-links {
-    a + a{
+    a + a {
       margin-left: 10px;
     }
   }
@@ -45,12 +46,12 @@
     @extend %ai-e;
     flex-direction: column;
     div {
-      @include fontAll(16px, 400, 'Montserrat');
+      @include fontAll(16px, 400, "MS");
       color: $black-col;
       letter-spacing: 0.2em;
     }
     p {
-      @include fontAll(12px, 400, 'Montserrat');
+      @include fontAll(12px, 400, "MS");
       color: $main-col;
     }
   }
@@ -58,9 +59,9 @@
     padding: 15px 0;
   }
   &-location-title {
-    @include fontAll(12px, 400, 'Montserrat');
+    @include fontAll(12px, 400, "MS");
     color: $black-col;
-    &:nth-child(2)  {
+    &:nth-child(2) {
       margin-top: 7px;
       color: $main-col;
     }
@@ -71,7 +72,7 @@
   &-location {
     &-item {
       h5 {
-        @include fontAll(14px, 400, 'Montserrat');
+        @include fontAll(14px, 400, "MS");
         margin-left: 5px;
         color: black;
       }
@@ -85,9 +86,8 @@
     align-items: center;
     justify-content: space-between;
   }
-  margin-bottom: 13px;
+  padding-bottom: 13px;
 }
-
 
 //====================== content==================//
 
@@ -96,10 +96,10 @@
     height: 100%;
     @extend %d-f;
     @extend %jc-c;
-    @extend %ai-fs;
+    @extend %ai-s;
     @extend %fl-dc;
   }
-  &-btn { 
+  &-btn {
     margin-top: 50px;
   }
   &-info-item + &-info-item {
@@ -110,12 +110,12 @@
   }
   &-info-item {
     max-width: 221px;
-    @include fontAll(16px, 400, 'Montserrat');
+    @include fontAll(16px, 400, "MS");
     line-height: 20px;
     color: $gray-col;
     position: relative;
     &::after {
-      content: '';
+      content: "";
       width: 42px;
       height: 1px;
       background-color: $main-col;
@@ -125,10 +125,10 @@
     }
   }
   &-sub-title {
-    @include fontAll(46px, 500, 'CG')
+    @include fontAll(46px, 500, "CG");
   }
   &-title {
-    @include fontAll(60px, 600, 'CG');
+    @include fontAll(60px, 600, "CG");
     line-height: 72px;
     text-transform: uppercase;
   }
@@ -141,7 +141,6 @@
   }
 }
 
-
 .trand {
   @extend %d-f;
   @extend %ai-c;
@@ -149,7 +148,7 @@
   &_left {
     width: 70%;
     margin-left: auto;
-  } 
+  }
   &-product {
     width: calc(33.33% - 30px);
     margin: 15px;
@@ -170,10 +169,9 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
-    
   }
   &_sub-title {
-    @include fontAll(20px, 400, 'Montserrat');
+    @include fontAll(20px, 400, "Montserrat");
     color: $gray-col;
     margin-top: 20px;
     margin-bottom: 50px;
@@ -184,10 +182,9 @@
   }
   &-item {
     width: 50%;
-    &:nth-child(2){
+    &:nth-child(2) {
       margin-left: 30px;
     }
-
   }
 }
 
@@ -196,7 +193,7 @@
     width: 50px;
   }
   &-info-title {
-    @include fontAll(16px, 400, 'Montserrat');
+    @include fontAll(16px, 400, "MS");
     margin-left: 30px;
   }
   &-info {
@@ -208,5 +205,53 @@
   &-info-item {
     display: flex;
     align-items: center;
+  }
+}
+
+.products {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  &-price {
+    @include fontAll(12px, 400, "MS");
+    color: $main-col;
+  }
+  &-sale {
+    @include fontAll(12px, 400, "MS");
+    color: $gray-col;
+    text-decoration: line-through;
+    margin-top: 25px;
+  }
+  &-title {
+    @include fontAll(16, 400, "MS");
+    margin-top: 30px;
+    position: relative;
+    &::after {
+      content: "";
+      width: 77px;
+      height: 1px;
+      background-color: $main-col;
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &-img {
+    @include fixImg(156px, 161px, false);
+  }
+  &-item {
+    width: 25%;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    @extend %transition;
+    &:hover {
+      z-index: 2;
+      box-shadow: 10px 5px 40px rgba(0, 0, 0, 0.3);
+    }
   }
 }
