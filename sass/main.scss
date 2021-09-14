@@ -432,25 +432,91 @@ header {
 }
 
 .contact {
-  &-social-title {
-    @include fontAll(16px, 400, "Montserrat");
+  &_diamond {
+    img {
+      margin-bottom: -10px;
+    }
   }
-  &-social{
+  &_social_icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: flex-start;
+    margin-right: 15px;
+  }
+  &_social_title {
+    @include fontAll(16px, 400, 'Montserrat');
+    a {
+      @include fontAll(16px, 400, 'Montserrat');
+      color: $main-col;
+      margin-top: 5px;
+      display: inline-block;
+      text-decoration: underline;
+    }
+  }
+  &_social {
     display: flex;
     align-items: flex-start;
     margin-top: 30px;
   }
-  &-map {
+  &_map {
     width: 60%;
   }
-  &-info {
+  &_info {
     width: 40%;
-    color: #fff;
-    padding: 75px 30px 0 35px;
+    padding: 70px 35px 0 35px;
     background-color: #000;
-    @include fontAll(32px, 500, "CG");
+    color: #fff;
+    @include fontAll(32px, 500, 'CG');
   }
-  &-block {
+  &_block {
     display: flex;
+  }
+}
+
+.footer {
+  background-color: #e5e5e5;
+  margin-top: 150px;
+  padding: 23px 0;
+  &_bottom_text {
+    @include fontAll(12px, 400, 'Montserrat');
+    color: $gray-col;
+    text-transform: uppercase;
+  }
+  &_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  &_middle {
+    text-align: center;
+    @include fontAll(9px, 400, 'Montserrat');
+    color: $gray-col;
+  }
+  &_left {
+    flex-direction: row-reverse;
+    .header-social-phone {
+      margin-right: 0;
+      margin-left: 30px;
+    }
+  }
+  &_social_item {
+    margin: 0 15px;
+  }
+  &_social_block {
+    display: flex;
+    margin-top: 12px;
+    align-items: center;
+  }
+  &_social_title {
+    @include fontAll(9px, 400, 'Montserrat');
+    color: $black-col;
+    text-align: center;
+  }
+  &_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
