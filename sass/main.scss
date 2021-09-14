@@ -1,41 +1,31 @@
 @import "files/fonts";
 @import "files/colors";
-@import "files/media.scss";
-@import "files/mixins.scss";
-@import "files/classes.scss";
+@import "files/mixins";
+@import "files/classes";
+@import "files/media";
 
-.container {
-  width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.main-title {
-  @include fontAll(48px, 500, "CG");
-}
-
-//=================Header================//
-
+//=========================Header
 header {
   background-color: #fff;
 }
-
 .header {
-  &-nav {
-    &-item {
-      a {
-        @include fontAll(13px, 400, "MS");
-        text-transform: uppercase;
-        color: $black-col;
-        @extend %transition;
-        &:hover {
-          color: $main-col;
-        }
-      }
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 13px;
+  &-nav-link {
+    @include fontAll(13px, 400, "Montserrat");
+    text-transform: uppercase;
+    color: $black-col;
+    @extend %transition;
+    &:hover {
+      color: $main-col;
     }
   }
   &-social-links {
+    a {
+      display: inline-block;
+    }
     a + a {
       margin-left: 10px;
     }
@@ -46,57 +36,51 @@ header {
     @extend %ai-e;
     flex-direction: column;
     div {
-      @include fontAll(16px, 400, "MS");
+      @include fontAll(16px, 400, "Montserrat");
       color: $black-col;
       letter-spacing: 0.2em;
     }
     p {
-      @include fontAll(12px, 400, "MS");
+      @include fontAll(12px, 400, "Montserrat");
       color: $main-col;
+      margin-top: 5px;
     }
   }
   &-logo {
     padding: 15px 0;
   }
   &-location-title {
-    @include fontAll(12px, 400, "MS");
+    @include fontAll(12px, 400, "Montserrat");
     color: $black-col;
     &:nth-child(2) {
-      margin-top: 7px;
       color: $main-col;
+      margin-top: 7px;
     }
   }
   &-location-info {
     margin-left: 30px;
   }
-  &-location {
-    &-item {
-      h5 {
-        @include fontAll(14px, 400, "MS");
-        margin-left: 5px;
-        color: black;
-      }
+  &-location-item {
+    h5 {
+      @include fontAll(14px, 400, "Montserrat");
+      margin-left: 5px;
     }
   }
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
   &-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  padding-bottom: 13px;
 }
 
-//====================== content==================//
+//=========================Content
 
 .main_slider {
   &-block {
     height: 100%;
     @extend %d-f;
     @extend %jc-c;
-    @extend %ai-s;
+    @extend %ai-fs;
     @extend %fl-dc;
   }
   &-btn {
@@ -110,7 +94,7 @@ header {
   }
   &-info-item {
     max-width: 221px;
-    @include fontAll(16px, 400, "MS");
+    @include fontAll(16px, 400, "Montserrat");
     line-height: 20px;
     color: $gray-col;
     position: relative;
@@ -126,17 +110,20 @@ header {
   }
   &-sub-title {
     @include fontAll(46px, 500, "CG");
+    letter-spacing: 0.1em;
+    line-height: 56px;
   }
   &-title {
     @include fontAll(60px, 600, "CG");
     line-height: 72px;
     text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
-  &_item {
+  &-item {
     width: 100%;
     height: calc(100vh - 150px);
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: center center;
     background-size: cover;
   }
 }
@@ -154,15 +141,23 @@ header {
     margin: 15px;
     position: relative;
     cursor: pointer;
-    img {
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
       @extend %transition;
+    }
+    &:hover::after {
+      background-color: rgba(255, 255, 255, 0);
+    }
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.5;
-      &:hover {
-        opacity: 1;
-      }
     }
   }
   &-products {
@@ -189,20 +184,20 @@ header {
 }
 
 .diamond {
-  &-info-icon {
+  &_info-icon {
     width: 50px;
   }
-  &-info-title {
-    @include fontAll(16px, 400, "MS");
+  &_info-title {
+    @include fontAll(16px, 400, "Montserrat");
     margin-left: 30px;
   }
-  &-info {
+  &_info {
     margin-top: 50px;
   }
-  &-info-item + &-info-item {
+  &_info-item + &_info-item {
     margin-top: 25px;
   }
-  &-info-item {
+  &_info-item {
     display: flex;
     align-items: center;
   }
@@ -212,18 +207,38 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .btn-purp {
+      background: transparent !important;
+      color: $black-col;
+    }
+  }
+  &-badge {
+    position: absolute;
+    top: 8px;
+    left: 9px;
+    padding: 4px 12px;
+    border: 1px solid #6a6a6a;
+    @include fontAll(12px, 700, "Montserrat");
+    color: $main-col;
+  }
   &-price {
-    @include fontAll(12px, 400, "MS");
+    @include fontAll(16px, 400, "Montserrat");
     color: $main-col;
   }
   &-sale {
-    @include fontAll(12px, 400, "MS");
+    @include fontAll(12px, 400, "Montserrat");
     color: $gray-col;
     text-decoration: line-through;
     margin-top: 25px;
   }
   &-title {
-    @include fontAll(16, 400, "MS");
+    @include fontAll(16px, 400, "Montserrat");
+    color: $black-col;
     margin-top: 30px;
     position: relative;
     &::after {
@@ -239,6 +254,7 @@ header {
   }
   &-img {
     @include fixImg(156px, 161px, false);
+    margin: 0 auto;
   }
   &-item {
     width: 25%;
@@ -249,9 +265,192 @@ header {
     padding-left: 15px;
     padding-right: 15px;
     @extend %transition;
+    cursor: pointer;
+    border: 1px solid #f4f4f4;
+    position: relative;
     &:hover {
       z-index: 2;
-      box-shadow: 10px 5px 40px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
     }
+  }
+}
+
+.service {
+  margin-top: 162px;
+  &-info + &-info {
+    margin-top: 40px;
+  }
+  &-info-text {
+    @include fontAll(16px, 400, "Montserrat");
+    margin-top: 15px;
+    color: $gray-col;
+  }
+  &-info-title {
+    @include fontAll(20px, 400, "Montserrat");
+    margin-top: 15px;
+    color: $black-col;
+  }
+  &-line {
+    width: 77px;
+    height: 1px;
+    background-color: $main-col;
+    display: inline-block;
+  }
+  &-diamond {
+    position: absolute;
+    bottom: -110px;
+    right: -110px;
+  }
+  &-img {
+    @include fixImg(100%, 447, true);
+  }
+  &-item {
+    width: 47%;
+    position: relative;
+  }
+  &-block {
+    @extend %d-f;
+    @extend %jc-b;
+    margin-top: 38px;
+  }
+  &-text {
+    @include fontAll(20px, 400, "Montserrat");
+    color: $gray-col;
+    margin-top: 20px;
+  }
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.diler {
+  background-color: #f3f3f6;
+  margin-bottom: 100px;
+  padding: 90px 0;
+  margin-top: 120px;
+  &-item-title {
+    @include fontAll(20px, 400, "Montserrat");
+    margin-left: 40px;
+  }
+  &-item {
+    width: 49%;
+    border: 1px solid $main-col;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 80px;
+  }
+  &-block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  &-desriptoin {
+    @include fontAll(20px, 300, "Montserrat");
+    text-align: center;
+    margin-top: 20px;
+  }
+  &-title {
+    text-align: center;
+  }
+}
+
+.video {
+  &-block {
+    margin-top: 40px;
+    width: 100%;
+    height: 600px;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.factory {
+  &-text {
+    @include fontAll(20px, 400, "Montserrat");
+  }
+  &-btn {
+    margin-top: 40px;
+  }
+  &-img {
+    @include fixImg(100%, 280px, true);
+  }
+  &-item {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 200px;
+  }
+}
+
+.about {
+  margin: 100px 0;
+  &-info-text {
+    @include fontAll(16px, 400, "Montserrat");
+    color: $gray-col;
+    margin-top: 10px;
+  }
+  &-info-title {
+    @include fontAll(16px, 400, "Montserrat");
+    color: $black-col;
+  }
+  &-info {
+    margin-top: 20px;
+    padding-left: 10px;
+    border-left: 1px solid $main-col;
+  }
+  &-img {
+    @include fixImg(100%, 200px, true);
+    position: relative;
+    cursor: pointer;
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &-item {
+    width: calc(33.33% - 30px);
+    margin: 15px;
+  }
+  &-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    padding-top: 50px;
+  }
+}
+
+.contact {
+  &-social-title {
+    @include fontAll(16px, 400, "Montserrat");
+  }
+  &-social{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30px;
+  }
+  &-map {
+    width: 60%;
+  }
+  &-info {
+    width: 40%;
+    color: #fff;
+    padding: 75px 30px 0 35px;
+    background-color: #000;
+    @include fontAll(32px, 500, "CG");
+  }
+  &-block {
+    display: flex;
   }
 }

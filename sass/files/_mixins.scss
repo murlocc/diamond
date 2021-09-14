@@ -4,7 +4,7 @@
   box-sizing: border-box;
   list-style: none;
 }
-body{
+body {
   background-color: #e5e5e5;
 }
 a {
@@ -22,8 +22,8 @@ textarea:focus,
 input,
 input:hover,
 input:focus,
-select:focus,
-select:hover {
+select:hover,
+select:focus {
   outline: none;
 }
 
@@ -36,9 +36,6 @@ select:hover {
 }
 
 @mixin fontAll($size, $weight, $family) {
-  // font-size: $size;
-  // font-weight: $weight;
-  // font-family: $family;
   font: {
     size: $size;
     weight: $weight;
@@ -63,7 +60,7 @@ select:hover {
 .btn-purp {
   padding: 15px 40px;
   background: linear-gradient(265.97deg, #b777be -9.18%, #88488f 103.05%);
-  @include fontAll(12px, 700, "Montserrat");
+  @include fontAll(12px, 700, 'Montserrat');
   border: none;
   color: #fff;
   cursor: pointer;
@@ -72,6 +69,8 @@ select:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   &:hover {
     background: linear-gradient(265.97deg, #b777be -30%, #88488f 80%);
     color: #fff;
@@ -93,5 +92,5 @@ select:hover {
 }
 
 .main-title {
-  @include fontAll(48px, 500, "CG");
+  @include fontAll(48px, 500, 'CG');
 }
