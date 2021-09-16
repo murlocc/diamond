@@ -3,10 +3,18 @@
 @import 'files/mixins';
 @import 'files/classes';
 
-
 //=========================Header
 header {
   background-color: #fff;
+}
+.hamburger {
+  display: none;
+}
+.header-mobile-nav {
+  display: none;
+}
+.header-social-mobile {
+  display: none;
 }
 .header {
   width: 85%;
@@ -522,4 +530,5 @@ header {
     justify-content: space-between;
   }
 }
+
 @import 'files/media';

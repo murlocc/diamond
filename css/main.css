@@ -251,6 +251,15 @@ select:focus {
 header {
   background-color: #fff; }
 
+.hamburger {
+  display: none; }
+
+.header-mobile-nav {
+  display: none; }
+
+.header-social-mobile {
+  display: none; }
+
 .header {
   width: 85%;
   margin-left: auto;
@@ -734,7 +743,7 @@ header {
   .header-location {
     flex-direction: column-reverse; }
 
-  .header-social-liks {
+  .header-social-links {
     margin-top: 10px; }
 
   .header-social {
@@ -743,7 +752,7 @@ header {
   .header-social-mobile {
     display: flex; }
 
-  .header-nav-warp.active {
+  .header-nav-wrap.active {
     transform: translateX(0); }
 
   .header-mobile-nav {
@@ -756,12 +765,17 @@ header {
     text-align: center; }
 
   .header-social {
+    margin-bottom: 10px; }
+
+  .header-location {
     margin-bottom: 15px; }
 
   .header-nav-link {
-    margin-bottom: 15px; }
+    font-size: 18px;
+    margin: 15px 0;
+    display: inline-block; }
 
-  .haeder-nav-warp {
+  .header-nav-wrap {
     position: fixed;
     top: 0;
     right: 0;
@@ -769,6 +783,7 @@ header {
     bottom: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0);
     z-index: 99;
     display: flex;
     justify-content: flex-end;
