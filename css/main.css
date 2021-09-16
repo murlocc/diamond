@@ -25,7 +25,7 @@
   list-style: none; }
 
 body {
-  background-color: #e5e5e5; }
+  background-color: #f5f5f5; }
 
 a {
   text-decoration: none;
@@ -86,7 +86,7 @@ select:focus {
   font-weight: 500;
   font-family: "CG"; }
 
-.header-social-phone, .main_slider-block, .trand, .service-block,
+.header-social-phone, .main_slider-block, .trand, .service_block,
 .d-f {
   display: -webkit-box;
   display: -webkit-flex;
@@ -130,7 +130,7 @@ select:focus {
   -ms-flex-pack: end !important;
   justify-content: flex-end !important; }
 
-.service-block,
+.service_block,
 .justify-content-between {
   -webkit-box-pack: justify !important;
   -webkit-justify-content: space-between !important;
@@ -248,18 +248,6 @@ select:focus {
   -ms-flex-direction: column-reverse !important;
   flex-direction: column-reverse !important; }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px; } }
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px; } }
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px; } }
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1170px; } }
 header {
   background-color: #fff; }
 
@@ -334,7 +322,7 @@ header {
   color: #6a6a6a;
   position: relative; }
   .main_slider-info-item::after {
-    content: "";
+    content: '';
     width: 42px;
     height: 1px;
     background-color: #b777be;
@@ -372,7 +360,7 @@ header {
     position: relative;
     cursor: pointer; }
     .trand-product::after {
-      content: "";
+      content: '';
       width: 100%;
       height: 100%;
       background-color: rgba(255, 255, 255, 0.5);
@@ -429,14 +417,14 @@ header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px; }
-  .products-link {
+  .products_links {
     display: flex;
     align-items: center;
     justify-content: center; }
-    .products-link .btn-purp {
+    .products_links .btn-purp {
       background: transparent !important;
       color: #000000; }
-  .products-badge {
+  .products_badge {
     position: absolute;
     top: 8px;
     left: 9px;
@@ -466,7 +454,7 @@ header {
     margin-top: 30px;
     position: relative; }
     .products-title::after {
-      content: "";
+      content: '';
       width: 77px;
       height: 1px;
       background-color: #b777be;
@@ -495,113 +483,113 @@ header {
     position: relative; }
     .products-item:hover {
       z-index: 2;
-      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15); }
+      box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.3); }
 
 .service {
   margin-top: 162px; }
-  .service-info + .service-info {
+  .service_info + .service_info {
     margin-top: 40px; }
-  .service-info-text {
+  .service_info_text {
     font-size: 16px;
     font-weight: 400;
     font-family: "Montserrat";
-    margin-top: 15px;
+    margin-top: 10px;
     color: #6a6a6a; }
-  .service-info-title {
+  .service_info_title {
     font-size: 20px;
     font-weight: 400;
     font-family: "Montserrat";
     margin-top: 15px;
     color: #000000; }
-  .service-line {
+  .service_line {
     width: 77px;
     height: 1px;
     background-color: #b777be;
     display: inline-block; }
-  .service-diamond {
+  .service_diamond {
     position: absolute;
     bottom: -110px;
     right: -110px; }
-  .service-img {
+  .service_img {
     width: 100%;
-    height: 447; }
-    .service-img img {
+    height: 447px; }
+    .service_img img {
       width: 100%;
       height: 100%;
       object-fit: cover; }
-  .service-item {
+  .service_item {
     width: 47%;
     position: relative; }
-  .service-block {
+  .service_block {
     margin-top: 38px; }
-  .service-text {
+  .service_text {
     font-size: 20px;
     font-weight: 400;
     font-family: "Montserrat";
     color: #6a6a6a;
     margin-top: 20px; }
-  .service-top {
+  .service_top {
     display: flex;
     align-items: center;
     justify-content: space-between; }
 
 .diler {
-  background-color: #f3f3f6;
   margin-bottom: 100px;
-  padding: 90px 0;
-  margin-top: 120px; }
-  .diler-item-title {
+  background-color: #f3f3f6;
+  margin-top: 120px;
+  padding: 90px 0; }
+  .diler_item_title {
     font-size: 20px;
     font-weight: 400;
     font-family: "Montserrat";
     margin-left: 40px; }
-  .diler-item {
+  .diler_item {
     width: 49%;
     border: 1px solid #b777be;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 40px 80px; }
-  .diler-block {
+  .diler_block {
     display: flex;
     justify-content: space-between;
     margin-top: 40px; }
-  .diler-desriptoin {
+  .diler_description {
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     font-family: "Montserrat";
     text-align: center;
     margin-top: 20px; }
-  .diler-title {
+  .diler_title {
     text-align: center; }
 
-.video-block {
+.video_block {
   margin-top: 40px;
   width: 100%;
   height: 600px; }
-  .video-block iframe {
+  .video_block iframe {
     width: 100%;
     height: 100%; }
 
-.factory-text {
+.factory_text {
   font-size: 20px;
   font-weight: 400;
   font-family: "Montserrat"; }
-.factory-btn {
+.factory_btn {
   margin-top: 40px; }
-.factory-img {
+.factory_img {
   width: 100%;
   height: 280px; }
-  .factory-img img {
+  .factory_img img {
     width: 100%;
     height: 100%;
     object-fit: cover; }
-.factory-item {
-  width: 46%;
+.factory_item {
+  width: 48%;
   display: flex;
   flex-direction: column;
   align-items: flex-start; }
-.factory-block {
+.factory_block {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -609,43 +597,43 @@ header {
 
 .about {
   margin: 100px 0; }
-  .about-info-text {
-    font-size: 16px;
+  .about_info_text {
+    font-size: 12px;
     font-weight: 400;
     font-family: "Montserrat";
     color: #6a6a6a;
     margin-top: 10px; }
-  .about-info-title {
+  .about_info_title {
     font-size: 16px;
     font-weight: 400;
     font-family: "Montserrat";
     color: #000000; }
-  .about-info {
+  .about_info {
     margin-top: 20px;
     padding-left: 10px;
     border-left: 1px solid #b777be; }
-  .about-img {
+  .about_img {
     width: 100%;
     height: 200px;
     position: relative;
     cursor: pointer; }
-    .about-img img {
+    .about_img img {
       width: 100%;
       height: 100%;
       object-fit: cover; }
-    .about-img span {
+    .about_img span {
       position: absolute;
-      top: 50%;
       left: 50%;
+      top: 50%;
       transform: translate(-50%, -50%); }
-  .about-item {
+  .about_item {
     width: calc(33.33% - 30px);
     margin: 15px; }
-  .about-block {
+  .about_block {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
-    padding-top: 50px; }
+    margin: -15px;
+    padding-top: 30px; }
 
 .contact_diamond img {
   margin-bottom: -10px; }
@@ -726,5 +714,83 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px; } }
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px; } }
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px; } }
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px; } }
+@media screen and (max-width: 991px) {
+  .header-location-item {
+    margin-top: 10px; }
+
+  .header-location {
+    flex-direction: column-reverse; }
+
+  .header-social-liks {
+    margin-top: 10px; }
+
+  .header-social {
+    flex-direction: column; } }
+@media screen and (max-width: 767px) {
+  .header-social-mobile {
+    display: flex; }
+
+  .header-nav-warp.active {
+    transform: translateX(0); }
+
+  .header-mobile-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px; }
+
+  .header-location-title:nth-child(2) {
+    text-align: center; }
+
+  .header-social {
+    margin-bottom: 15px; }
+
+  .header-nav-link {
+    margin-bottom: 15px; }
+
+  .haeder-nav-warp {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    display: flex;
+    justify-content: flex-end;
+    transform: translateX(100%);
+    transition: all 0.4s ease; }
+
+  .header-nav {
+    width: 88%;
+    height: 100%;
+    background-color: #e5e5e5;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    padding-top: 30px; }
+
+  .header-location-dn {
+    display: none; }
+
+  .header-social-dn {
+    display: none; }
+
+  .hamburger {
+    display: block;
+    cursor: pointer; } }
 
 /*# sourceMappingURL=main.css.map */

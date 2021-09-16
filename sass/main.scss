@@ -1,8 +1,8 @@
-@import "files/fonts";
-@import "files/colors";
-@import "files/mixins";
-@import "files/classes";
-@import "files/media";
+@import 'files/fonts';
+@import 'files/colors';
+@import 'files/mixins';
+@import 'files/classes';
+
 
 //=========================Header
 header {
@@ -14,7 +14,7 @@ header {
   margin-right: auto;
   padding-bottom: 13px;
   &-nav-link {
-    @include fontAll(13px, 400, "Montserrat");
+    @include fontAll(13px, 400, 'Montserrat');
     text-transform: uppercase;
     color: $black-col;
     @extend %transition;
@@ -36,12 +36,12 @@ header {
     @extend %ai-e;
     flex-direction: column;
     div {
-      @include fontAll(16px, 400, "Montserrat");
+      @include fontAll(16px, 400, 'Montserrat');
       color: $black-col;
       letter-spacing: 0.2em;
     }
     p {
-      @include fontAll(12px, 400, "Montserrat");
+      @include fontAll(12px, 400, 'Montserrat');
       color: $main-col;
       margin-top: 5px;
     }
@@ -50,7 +50,7 @@ header {
     padding: 15px 0;
   }
   &-location-title {
-    @include fontAll(12px, 400, "Montserrat");
+    @include fontAll(12px, 400, 'Montserrat');
     color: $black-col;
     &:nth-child(2) {
       color: $main-col;
@@ -62,7 +62,7 @@ header {
   }
   &-location-item {
     h5 {
-      @include fontAll(14px, 400, "Montserrat");
+      @include fontAll(14px, 400, 'Montserrat');
       margin-left: 5px;
     }
   }
@@ -94,12 +94,12 @@ header {
   }
   &-info-item {
     max-width: 221px;
-    @include fontAll(16px, 400, "Montserrat");
+    @include fontAll(16px, 400, 'Montserrat');
     line-height: 20px;
     color: $gray-col;
     position: relative;
     &::after {
-      content: "";
+      content: '';
       width: 42px;
       height: 1px;
       background-color: $main-col;
@@ -109,12 +109,12 @@ header {
     }
   }
   &-sub-title {
-    @include fontAll(46px, 500, "CG");
+    @include fontAll(46px, 500, 'CG');
     letter-spacing: 0.1em;
     line-height: 56px;
   }
   &-title {
-    @include fontAll(60px, 600, "CG");
+    @include fontAll(60px, 600, 'CG');
     line-height: 72px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -142,7 +142,7 @@ header {
     position: relative;
     cursor: pointer;
     &::after {
-      content: "";
+      content: '';
       width: 100%;
       height: 100%;
       background-color: rgba(255, 255, 255, 0.5);
@@ -166,7 +166,7 @@ header {
     margin: 0 -15px;
   }
   &_sub-title {
-    @include fontAll(20px, 400, "Montserrat");
+    @include fontAll(20px, 400, 'Montserrat');
     color: $gray-col;
     margin-top: 20px;
     margin-bottom: 50px;
@@ -188,7 +188,7 @@ header {
     width: 50px;
   }
   &_info-title {
-    @include fontAll(16px, 400, "Montserrat");
+    @include fontAll(16px, 400, 'Montserrat');
     margin-left: 30px;
   }
   &_info {
@@ -208,7 +208,7 @@ header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
-  &-link {
+  &_links {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -217,32 +217,32 @@ header {
       color: $black-col;
     }
   }
-  &-badge {
+  &_badge {
     position: absolute;
     top: 8px;
     left: 9px;
     padding: 4px 12px;
     border: 1px solid #6a6a6a;
-    @include fontAll(12px, 700, "Montserrat");
+    @include fontAll(12px, 700, 'Montserrat');
     color: $main-col;
   }
   &-price {
-    @include fontAll(16px, 400, "Montserrat");
+    @include fontAll(16px, 400, 'Montserrat');
     color: $main-col;
   }
   &-sale {
-    @include fontAll(12px, 400, "Montserrat");
+    @include fontAll(12px, 400, 'Montserrat');
     color: $gray-col;
     text-decoration: line-through;
     margin-top: 25px;
   }
   &-title {
-    @include fontAll(16px, 400, "Montserrat");
+    @include fontAll(16px, 400, 'Montserrat');
     color: $black-col;
     margin-top: 30px;
     position: relative;
     &::after {
-      content: "";
+      content: '';
       width: 77px;
       height: 1px;
       background-color: $main-col;
@@ -270,70 +270,72 @@ header {
     position: relative;
     &:hover {
       z-index: 2;
-      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.3);
     }
   }
 }
 
 .service {
   margin-top: 162px;
-  &-info + &-info {
+  &_info + &_info {
     margin-top: 40px;
   }
-  &-info-text {
-    @include fontAll(16px, 400, "Montserrat");
-    margin-top: 15px;
+  &_info_text {
+    @include fontAll(16px, 400, 'Montserrat');
+    margin-top: 10px;
     color: $gray-col;
   }
-  &-info-title {
-    @include fontAll(20px, 400, "Montserrat");
+  &_info_title {
+    @include fontAll(20px, 400, 'Montserrat');
     margin-top: 15px;
     color: $black-col;
   }
-  &-line {
+  &_line {
     width: 77px;
     height: 1px;
     background-color: $main-col;
     display: inline-block;
   }
-  &-diamond {
+  &_diamond {
     position: absolute;
     bottom: -110px;
     right: -110px;
   }
-  &-img {
-    @include fixImg(100%, 447, true);
+  &_img {
+    @include fixImg(100%, 447px, true);
   }
-  &-item {
+  &_item {
     width: 47%;
     position: relative;
   }
-  &-block {
+  &_block {
     @extend %d-f;
     @extend %jc-b;
     margin-top: 38px;
   }
-  &-text {
-    @include fontAll(20px, 400, "Montserrat");
+  &_text {
+    @include fontAll(20px, 400, 'Montserrat');
     color: $gray-col;
     margin-top: 20px;
   }
-  &-top {
+  &_top {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 }
+
 .diler {
-  background-color: #f3f3f6;
   margin-bottom: 100px;
-  padding: 90px 0;
+  background-color: #f3f3f6;
   margin-top: 120px;
-  &-item-title {
-    @include fontAll(20px, 400, "Montserrat");
+
+  padding: 90px 0;
+  &_item_title {
+    @include fontAll(20px, 400, 'Montserrat');
     margin-left: 40px;
   }
-  &-item {
+  &_item {
     width: 49%;
     border: 1px solid $main-col;
     display: flex;
@@ -341,23 +343,23 @@ header {
     justify-content: center;
     padding: 40px 80px;
   }
-  &-block {
+  &_block {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
   }
-  &-desriptoin {
-    @include fontAll(20px, 300, "Montserrat");
+  &_description {
+    @include fontAll(20px, 400, 'Montserrat');
     text-align: center;
     margin-top: 20px;
   }
-  &-title {
+  &_title {
     text-align: center;
   }
 }
 
 .video {
-  &-block {
+  &_block {
     margin-top: 40px;
     width: 100%;
     height: 600px;
@@ -369,22 +371,22 @@ header {
 }
 
 .factory {
-  &-text {
-    @include fontAll(20px, 400, "Montserrat");
+  &_text {
+    @include fontAll(20px, 400, 'Montserrat');
   }
-  &-btn {
+  &_btn {
     margin-top: 40px;
   }
-  &-img {
+  &_img {
     @include fixImg(100%, 280px, true);
   }
-  &-item {
-    width: 46%;
+  &_item {
+    width: 48%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  &-block {
+  &_block {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -394,40 +396,40 @@ header {
 
 .about {
   margin: 100px 0;
-  &-info-text {
-    @include fontAll(16px, 400, "Montserrat");
+  &_info_text {
+    @include fontAll(12px, 400, 'Montserrat');
     color: $gray-col;
     margin-top: 10px;
   }
-  &-info-title {
-    @include fontAll(16px, 400, "Montserrat");
+  &_info_title {
+    @include fontAll(16px, 400, 'Montserrat');
     color: $black-col;
   }
-  &-info {
+  &_info {
     margin-top: 20px;
     padding-left: 10px;
     border-left: 1px solid $main-col;
   }
-  &-img {
+  &_img {
     @include fixImg(100%, 200px, true);
     position: relative;
     cursor: pointer;
     span {
       position: absolute;
-      top: 50%;
       left: 50%;
+      top: 50%;
       transform: translate(-50%, -50%);
     }
   }
-  &-item {
+  &_item {
     width: calc(33.33% - 30px);
     margin: 15px;
   }
-  &-block {
+  &_block {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
-    padding-top: 50px;
+    margin: -15px;
+    padding-top: 30px;
   }
 }
 
@@ -520,3 +522,4 @@ header {
     justify-content: space-between;
   }
 }
+@import 'files/media';
