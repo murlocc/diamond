@@ -42,50 +42,47 @@
 
 //max width 991px
 @media screen and (max-width: 991px) {
-  .service_top_right{
-    display: none;
-  }
-  .service_diamond img{
+  .service_diamond img {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
-  .service_diamond{
+  .service_diamond {
     bottom: -90px;
     right: -70px;
     width: 350px;
     height: 280px;
   }
-  .trand-item:nth-child(2){
+  .trand-item:nth-child(2) {
     margin-left: 0;
   }
-  .about_item{
-    width: calc(50% - 30%);
+  .about_item {
+    width: calc(50% - 30px);
   }
-  .service_item + .service_item{
+  .service_item + .service_item {
     margin-top: 50px;
   }
-  .service_block{
+  .service_block {
     flex-direction: column;
   }
-  .service_item{
+  .service_item {
     width: 100%;
   }
-  .products-item{
+  .products-item {
     width: 50%;
   }
-  .products{
+  .products {
     flex-wrap: wrap;
     margin-top: 30px;
   }
-  .trand_left{
+  .trand_left {
     margin-right: auto;
   }
-  .trand-item{
+  .trand-item {
     width: 100%;
   }
-  .trand{
-    flex-direction:column-reverse;
+  .trand {
+    flex-direction: column-reverse;
     margin-top: 0;
   }
   .header-location-item {
@@ -105,72 +102,84 @@
 
 //max width 767px
 @media screen and (max-width: 767px) {
-
-  .footer_bottom_text{
+  .service_diamond {
+    display: none;
+  }
+  .footer_bottom_text {
     text-align: center;
   }
-  .footer_bottom_text + .footer_bottom_text{
+  .footer_bottom_text + .footer_bottom_text {
     margin-top: 12px;
   }
-  .footer_bottom{
+  .footer_bottom {
     flex-direction: column;
   }
-  .footer_left{
+  .footer_left {
     margin-top: 15px;
   }
-  .footer_social{
+  .footer_social {
     margin-top: 15px;
   }
-  .footer_top{
+  .footer_top {
     flex-direction: column;
   }
-  .contact_info_title{
+  .contact_info_title {
     text-align: center;
   }
-  .contact_info{
+  .contact_info {
     width: 100%;
   }
-  .contact_map{
+  .contact_map {
     width: 100%;
     height: 350px;
   }
-  .contact_block{
-  flex-direction: column;
+  .contact_block {
+    flex-direction: column;
   }
-  .about_img{
+  .about_img {
     height: 260px;
   }
-  .about_item{
+  .about_item {
     width: calc(100% - 30px);
   }
-  .factory_btn{
+  .factory_btn {
     margin-left: auto;
     margin-right: auto;
   }
-  .factory_block{
+  .factory_block {
     flex-direction: column;
+    margin-top: 100px;
   }
-  .factory_item{
+  .factory_item {
     width: 100%;
     text-align: center;
   }
-  .factory_item + .factory_item{
+  .factory_item + .factory_item {
     margin-top: 50px;
   }
-  .diler_block{
-    flex-wrap: wrap;
-  }
-  .diler{
+  .diler {
     margin-bottom: 0;
   }
-  .vidoe_block{
+  .video_block {
     height: 380px;
   }
-  .diler_item + .diler_item{
+  .diler_item + .diler_item {
     margin-top: 20px;
   }
-  .diler_item{
+  .diler_item {
     width: 100%;
+  }
+  .diler_block {
+    flex-direction: column;
+  }
+  .service_top_left {
+    text-align: center;
+  }
+  .service_top_right {
+    display: none;
+  }
+  .trand-img {
+    height: 350px;
   }
   .header-social-mobile {
     display: flex;
@@ -241,93 +250,96 @@
 
 //max width 480px
 @media screen and (max-width: 480px) {
-
-  .service_diamond img{
-    display: none;
-  }
-  .footer{
+  .footer {
     margin-top: 0;
   }
-  .about{
+  .about {
     margin: 60px 0;
   }
-  .factory_block{
+  .factory_block {
     margin-top: 60px;
   }
-  .diler_item_title{
+  .diler_item_title {
     margin-left: 0;
     text-align: center;
     margin-top: 10px;
   }
-  .diler_item{
+  .diler_item {
     flex-direction: column;
     padding: 40px 20px;
   }
-  .diler{
+  .diler {
     margin-top: 0;
     padding: 60px 0;
   }
-  .service_info_text{
+  .service_info_text {
     text-align: center;
   }
-  .service_line{
+  .service_line {
     display: block;
     margin: 0 auto;
   }
-  .service_info_title{
+  .service_info_title {
     margin-top: 5px;
     text-align: center;
   }
-  .service_info + .service_info{
+  .service_info + .service_info {
     margin-top: 15px;
   }
-  .service_item + .service_item{
+  .service_item + .service_item {
     margin-top: 25px;
   }
-  .service_img{
+  .service_img {
     height: 300px;
   }
-  .trand_product{
+  .service {
+    margin-top: 60px;
+  }
+  .trand-product {
     width: calc(33.33% - 20px);
     margin: 10px;
   }
-  .contact_diamond img{
+  .contact_diamond img {
     width: 100%;
     height: 150px;
   }
-  .trand_products{
+  .trand-products {
     margin: 0 -10px;
   }
-  .trand_sub-title{
+  .trand_sub-title {
     text-align: center;
     width: 100%;
     margin-bottom: 10px;
   }
-  .trand-img{
+  .trand-img {
     height: 230px;
   }
-  .trand-img img{
+  .trand-img img {
     object-fit: cover;
   }
-  .main-title{
+  .main-title {
     text-align: center;
     font-size: 40px;
+    margin-top: 10px;
   }
-  .btn-purp{
+  .btn-purp {
     padding: 15px 25px;
     margin-left: auto;
     margin-right: auto;
   }
-  .main_slider-item{
+  .main_slider-info-item {
+    font-size: 12px;
+  }
+  .main_slider-item {
     background-position: left center;
   }
-  .main_slider-sub-title{
+  .main_slider-sub-title {
     font-size: 35px;
     line-height: 35px;
     margin-top: 15px;
     text-align: center;
   }
-  .main_slider-title{
+  .main_slider-title {
     font-size: 40px;
     line-height: 45px;
     text-align: center;
@@ -337,8 +349,17 @@
 
 //max width 400px
 @media screen and (max-width: 400px) {
+  .products-item {
+    width: 100%;
+  }
+  .products {
+    flex-direction: column;
+  }
   //max width 400px
 }
 
 @media screen and (max-width: 340px) {
+  .main_slider-title {
+    font-size: 35px;
+  }
 }

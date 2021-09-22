@@ -737,9 +737,6 @@ header {
   .container {
     max-width: 1170px; } }
 @media screen and (max-width: 991px) {
-  .service_top_right {
-    display: none; }
-
   .service_diamond img {
     width: 100%;
     height: 100%;
@@ -755,7 +752,7 @@ header {
     margin-left: 0; }
 
   .about_item {
-    width: calc(50% - 30%); }
+    width: calc(50% - 30px); }
 
   .service_item + .service_item {
     margin-top: 50px; }
@@ -795,6 +792,9 @@ header {
   .header-social {
     flex-direction: column; } }
 @media screen and (max-width: 767px) {
+  .service_diamond {
+    display: none; }
+
   .footer_bottom_text {
     text-align: center; }
 
@@ -837,7 +837,8 @@ header {
     margin-right: auto; }
 
   .factory_block {
-    flex-direction: column; }
+    flex-direction: column;
+    margin-top: 100px; }
 
   .factory_item {
     width: 100%;
@@ -846,13 +847,10 @@ header {
   .factory_item + .factory_item {
     margin-top: 50px; }
 
-  .diler_block {
-    flex-wrap: wrap; }
-
   .diler {
     margin-bottom: 0; }
 
-  .vidoe_block {
+  .video_block {
     height: 380px; }
 
   .diler_item + .diler_item {
@@ -860,6 +858,18 @@ header {
 
   .diler_item {
     width: 100%; }
+
+  .diler_block {
+    flex-direction: column; }
+
+  .service_top_left {
+    text-align: center; }
+
+  .service_top_right {
+    display: none; }
+
+  .trand-img {
+    height: 350px; }
 
   .header-social-mobile {
     display: flex; }
@@ -920,9 +930,6 @@ header {
     display: block;
     cursor: pointer; } }
 @media screen and (max-width: 480px) {
-  .service_diamond img {
-    display: none; }
-
   .footer {
     margin-top: 0; }
 
@@ -965,7 +972,10 @@ header {
   .service_img {
     height: 300px; }
 
-  .trand_product {
+  .service {
+    margin-top: 60px; }
+
+  .trand-product {
     width: calc(33.33% - 20px);
     margin: 10px; }
 
@@ -973,7 +983,7 @@ header {
     width: 100%;
     height: 150px; }
 
-  .trand_products {
+  .trand-products {
     margin: 0 -10px; }
 
   .trand_sub-title {
@@ -989,12 +999,16 @@ header {
 
   .main-title {
     text-align: center;
-    font-size: 40px; }
+    font-size: 40px;
+    margin-top: 10px; }
 
   .btn-purp {
     padding: 15px 25px;
     margin-left: auto;
     margin-right: auto; }
+
+  .main_slider-info-item {
+    font-size: 12px; }
 
   .main_slider-item {
     background-position: left center; }
@@ -1009,5 +1023,14 @@ header {
     font-size: 40px;
     line-height: 45px;
     text-align: center; } }
+@media screen and (max-width: 400px) {
+  .products-item {
+    width: 100%; }
+
+  .products {
+    flex-direction: column; } }
+@media screen and (max-width: 340px) {
+  .main_slider-title {
+    font-size: 35px; } }
 
 /*# sourceMappingURL=main.css.map */
